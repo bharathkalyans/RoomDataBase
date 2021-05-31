@@ -3,11 +3,9 @@ package com.bharathkalyans.roomdatabase.fragments.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bharathkalyans.roomdatabase.R
-import com.bharathkalyans.roomdatabase.data.User
+import com.bharathkalyans.roomdatabase.model.User
 import kotlinx.android.synthetic.main.custom_row.view.*
 
 

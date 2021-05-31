@@ -1,9 +1,12 @@
-package com.bharathkalyans.roomdatabase.data
+package com.bharathkalyans.roomdatabase.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.bharathkalyans.roomdatabase.data.UserDatabase
+import com.bharathkalyans.roomdatabase.repository.UserRepository
+import com.bharathkalyans.roomdatabase.model.User
 import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application) : AndroidViewModel(application) {

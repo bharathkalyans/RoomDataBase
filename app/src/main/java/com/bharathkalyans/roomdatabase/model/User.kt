@@ -1,4 +1,4 @@
-package com.bharathkalyans.roomdatabase.data
+package com.bharathkalyans.roomdatabase.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
