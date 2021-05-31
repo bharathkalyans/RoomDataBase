@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.bharathkalyans.roomdatabase.data.UserDatabase
 import com.bharathkalyans.roomdatabase.repository.UserRepository
 import com.bharathkalyans.roomdatabase.model.User
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application) : AndroidViewModel(application) {
@@ -22,8 +23,15 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
 
 
     fun addUser(user: User) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
+        }
+    }
+
+
+    fun updateUser(user: User) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.updateUser(user)
         }
     }
 

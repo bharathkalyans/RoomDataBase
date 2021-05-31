@@ -3,6 +3,7 @@ package com.bharathkalyans.roomdatabase.fragments.list
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bharathkalyans.roomdatabase.R
 import com.bharathkalyans.roomdatabase.model.User
@@ -32,6 +33,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
         holder.itemView.lastName_txt.text = currentItem.lastName
         holder.itemView.age_text.text = currentItem.age.toString()
 
+        holder.itemView.rowlayout.setOnClickListener {
+            val action = ListFragmentDirections.actionListFragmentToUpdateFragment(currentItem)
+            holder.itemView.findNavController().navigate(action)
+        }
 
     }
 
